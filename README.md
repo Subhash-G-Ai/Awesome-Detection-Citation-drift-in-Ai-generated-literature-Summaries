@@ -1,157 +1,86 @@
-# Awesome Citation Drift in AI-Generated Literature
+# Awesome Citation Drift Detection in AI-Generated Literature
 
-A curated collection of research papers, datasets, tools, implementations, and learning resources on citation drift, citation hallucination, and citation integrity in AI-generated literature.
+A curated, verified academic repository for tracking, auditing, and detecting citation drift, reference hallucinations, and semantic misattribution in AI-generated scholarly summaries.
 
-## Table of Contents
-
+## Contents
 - [Topic Overview](#topic-overview)
 - [AI-Assisted Research Paper](#ai-assisted-research-paper)
 - [Citation Integrity Audit](#citation-integrity-audit)
 - [Curated Research Papers](#curated-research-papers)
-- [Datasets](#datasets)
 - [Tools and Libraries](#tools-and-libraries)
-- [GitHub Implementations](#github-implementations)
-- [Tutorials and Learning Resources](#tutorials-and-learning-resources)
-- [Repository Structure](#repository-structure)
-- [License](#license)
+
+---
 
 ## Topic Overview
 
-Citation drift describes situations in which an AI-generated claim and its supporting reference become less faithful to the original scholarly source. The problem can appear in several forms: a reference may be completely fabricated, bibliographic metadata may be incorrect, or a genuine paper may be cited even though it does not support the claim being made. These failures are particularly important in academic literature summaries because fluent language and realistic-looking references can make incorrect information appear trustworthy.
+The integration of Large Language Models (LLMs) into scholarly literature workflows has significantly transformed academic discovery and research synthesis. While generative AI excels at summarizing complex technical domains, it introduces a critical threat to scientific integrity known as **citation drift**. 
 
-Research on AI-generated citations shows that the problem is not limited to one model or one discipline. Studies have investigated fabricated bibliographic references, citation instability across multi-turn conversations, large-scale non-existent citations, and automated verification systems. Effective verification therefore requires more than checking whether a DOI resolves: researchers should also check the title, authors, publication venue, year, identifier, and whether the source actually supports the generated claim.
+Citation drift represents the progressive degradation of fidelity between an AI-generated claim, the target citation's metadata, and the underlying primary source text. Unlike basic factual hallucinations where models generate entirely fake entities, citation drift manifests in subtle, highly plausible structural forms:
+1. **Structural Fabrication**: Completely inventing publication metadata (titles, DOIs, or author lists).
+2. **Metadata Corruption**: Synthesizing real papers with mutated years, volume numbers, or omitted authors.
+3. **Semantic Misattribution**: Accurately citing genuine, highly relevant papers whose full text fails to logically support or entail the generated claim.
 
-This repository organizes research and practical resources around these issues. It focuses on citation authenticity, metadata verification, semantic claim-citation alignment, benchmark datasets, verification tools, and reproducible implementations. The goal is to help students and researchers treat AI-generated references as claims requiring independent scholarly verification rather than as automatically trustworthy evidence.
+As generative tools become embedded in scientific research, undetected citation drift risks polluting academic knowledge bases and deepening the reproducibility crisis. Mitigating this challenge requires multi-stage verification frameworks that combine automated database lookups (e.g., Crossref, OpenAlex), fuzzy metadata string matching, and Natural Language Inference (NLI) cross-encoders for full-text semantic support auditing.
+
+---
 
 ## AI-Assisted Research Paper
 
-**Title:** Detection of Citation Drift in AI-Generated Literature Summaries
+* **Paper Title**: Detection of Citation Drift in AI-Generated Literature Summaries
+* **Authors**: Gorrela Subhash
+* **Abstract**: Large Language Models are increasingly integrated into research synthesis workflows, but their adoption is compromised by citation drift. This paper establishes a formal taxonomy of citation distortions (structural fabrication, metadata corruption, and semantic misattribution) and proposes a hybrid detection pipeline combining multi-source scholarly retrieval, string edit distance matching, and NLI-based semantic entailment checks.
+* **Repository Link**: [View Full AI-Assisted Research Paper PDF](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/paper/Ai_assisted_reserach_paper.pdf)
 
-The research paper used for this laboratory examines citation drift in AI-generated literature summaries and discusses a retrieval-grounded framework for detecting metadata and semantic problems.
-
-The original laboratory document is preserved in:
-
-- [`paper/AI_Assisted_Research_Paper.pdf`](paper/AI_Assisted_Research_Paper.pdf)
+---
 
 ## Citation Integrity Audit
 
-The accompanying laboratory audit records the original AI-generated paper, reference inventory, systematic reference selection, pre-verification plausibility judgments, authenticity verification, and final scoring.
+* **Audit Summary**: Systematic citation audit conducted on the references generated within the primary research paper. A sample of 6 citations was evaluated across pre-verification plausibility, publication authenticity, bibliographic metadata correctness, persistent identifier resolution, and claim-citation entailment.
+* **Authenticity Score**: **83.33 / 100**
+* **Prediction Accuracy**: **83.33 %**
+* **Key Finding**: While most generated references resolved to real preprints, structural metadata errors (such as missing author lists) and subtle context shifts between generated claims and source texts were detected.
+* **Repository Link**: [View Complete Citation Audit PDF](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/citation-audit/citation_integrity_audit.pdf)
 
-The audit reported six references in the AI-generated paper. Five were classified as verified and one was classified as fabricated, producing an authenticity score of 83.33/100 in the submitted worksheet.
-
-- [`citation-audit/Citation_Integrity_Audit.pdf`](citation-audit/Citation_Integrity_Audit.pdf)
+---
 
 ## Curated Research Papers
 
-### Citation drift and citation reliability
+This repository includes a curated collection of verified scholarly literature organized by research focus. All entry metadata, DOIs, and arXiv identifiers have been verified.
 
-1. **Citation Drift: Measuring Reference Stability in Multi-Turn LLM Conversations** — Gokul Srinath Seetha Ram (2025). Introduces citation drift as references mutating, disappearing, or being fabricated during extended LLM interactions and proposes metrics for citation stability and fabrication.  
-   https://aclanthology.org/2025.wasp-main.20/
+* **Complete Literature Catalog**: [View Full List in references/references.md](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/references/references.md)
 
-2. **Fabrication and errors in the bibliographic citations generated by ChatGPT** — William H. Walters and Esther Isabelle Wilder (2023). Studies fabricated and erroneous citations generated by ChatGPT-3.5 and ChatGPT-4.  
-   https://doi.org/10.1038/s41598-023-41032-5
+### Verified Research Paper Files
 
-3. **LLM hallucinations in the wild: Large-scale evidence from non-existent citations** — Zhenyue Zhao et al. (2026). Audits a very large corpus of scientific references to investigate non-existent citations associated with LLM adoption.  
-   https://arxiv.org/abs/2605.07723
+- **Paper 1**: [research 1.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/research%201.pdf)
+- **Paper 2**: [research 2.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/research%202.pdf)
+- **Paper 3**: [research 3.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/research%203.pdf)
+- **Paper 4**: [reserach 4.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/reserach%204.pdf)
+- **Paper 5**: [research 5.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/research%205.pdf)
+- **Paper 6**: [research 6.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/research%206.pdf)
+- **Paper 7**: [research 7.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/research%207.pdf)
+- **Paper 8**: [reserach 8.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/reserach%208.pdf)
+- **Paper 9**: [research 9.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/research%209.pdf)
+- **Paper 10**: [research 10.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/research%2010.pdf)
+- **Paper 11**: [research 11.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/research%2011.pdf)
+- **Paper 12**: [research 12.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/research%2012.pdf)
+- **Paper 13**: [research 13.pdf](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/Curated%20reserach%20papers/research%2013.pdf)
 
-### Automated citation verification
-
-4. **CheckIfExist: Detecting Citation Hallucinations in the Era of AI-Generated Content** — Diletta Abbonato (2026). Presents an open-source verification approach using multiple scholarly databases, including Crossref, Semantic Scholar, and OpenAlex.  
-   https://arxiv.org/abs/2602.15871
-
-5. **Evaluating the Integrity of LLM-Generated Citations: Prevalence and Risks of Fabricated References in Scientific Literature** — Pablo Picazo-Sanchez and Lara Ortiz-Martin (2026). Investigates hallucinated scientific references using a large generated reference collection and a corpus of published papers.  
-   https://doi.org/10.3390/data11050122
-
-## Datasets
-
-### Citation Hallucination Benchmark
-
-A benchmark repository containing generated citation-backed text across multiple models and domains. References are checked against scholarly sources and categorized as existing, ambiguous, or fabricated.
-
-- GitHub: https://github.com/Zerichen/Citation-Hallucination
-
-### Citation Drift Benchmark
-
-The 2025 citation-drift study evaluates 240 conversations across four LLaMA models using 36 authentic scientific papers from six domains. The paper describes metrics including stability, fabrication rate, drift rate, drift entropy, and willingness-to-cite.
-
-- Paper and benchmark description: https://aclanthology.org/2025.wasp-main.20/
-
-### LLM-Generated Citation Dataset
-
-The 2026 Data paper reports a dataset containing 74,196 generated BibTeX references from nine LLMs and a separately collected set of 127,063 references from 3,541 papers published in 2023.
-
-- Paper: https://doi.org/10.3390/data11050122
+---
 
 ## Tools and Libraries
 
-- **Crossref** — Scholarly metadata and DOI lookup service useful for checking whether a citation corresponds to a registered scholarly work.  
-  https://www.crossref.org/
+Generative AI platforms used for research drafting alongside external verification databases used during reference auditing.
 
-- **OpenAlex** — Open scholarly metadata infrastructure useful for searching works, authors, venues, and identifiers.  
-  https://openalex.org/
+* **Detailed Tools Catalog**: [View Full List in tools/tools.md](https://github.com/Gorrela-Subhash/awesome-citation-drift-detection/blob/main/tools/tools.md)
 
-- **Semantic Scholar** — Scholarly search and research infrastructure useful for cross-checking papers and metadata.  
-  https://www.semanticscholar.org/
+### Generative AI Tools
+- **Gemini AI**: Primary generative AI tool used to draft the paper (*Gemini 3.6 Flash*).
+  * **Link**: [https://gemini.google.com](https://gemini.google.com)
+- **ChatGPT**: Secondary generative AI tool used for prompt testing and paper structuring.
+  * **Link**: [https://chatgpt.com](https://chatgpt.com)
 
-- **Google Scholar** — Broad scholarly search useful for exact-title and author/title verification.  
-  https://scholar.google.com/
-
-- **PubMed** — Discipline-specific scholarly database for biomedical and life-science literature.  
-  https://pubmed.ncbi.nlm.nih.gov/
-
-## GitHub Implementations
-
-### Citation-Hallucination
-
-A benchmark and verification implementation for measuring citation hallucination in LLM-generated text. The repository includes manually validated citation data and a `citecheck` package.
-
-- https://github.com/Zerichen/Citation-Hallucination
-
-### CheckIfExist
-
-The CheckIfExist project describes an open-source web-based approach for validating bibliographic references against multiple scholarly databases.
-
-- Paper: https://arxiv.org/abs/2602.15871
-
-## Tutorials and Learning Resources
-
-- **ACL Anthology — Citation Drift paper:** Useful as a research-oriented introduction to citation stability and drift in LLM conversations.  
-  https://aclanthology.org/2025.wasp-main.20/
-
-- **Crossref Documentation:** Reference material for DOI and scholarly metadata lookup.  
-  https://www.crossref.org/documentation/
-
-- **OpenAlex Documentation:** Documentation for querying open scholarly metadata.  
-  https://docs.openalex.org/
-
-- **Semantic Scholar API Documentation:** Documentation for programmatic scholarly-paper search and metadata retrieval.  
-  https://www.semanticscholar.org/product/api
-
-- **PubMed User Guide:** Guidance for searching and retrieving biomedical literature.  
-  https://pubmed.ncbi.nlm.nih.gov/about/
-
-## Repository Structure
-
-```text
-awesome-citation-drift-ai-literature/
-├── README.md
-├── LICENSE
-├── paper/
-│   └── AI_Assisted_Research_Paper.pdf
-├── citation-audit/
-│   └── Citation_Integrity_Audit.pdf
-├── references/
-│   └── references.md
-├── datasets/
-│   └── datasets.md
-├── tools/
-│   └── tools.md
-├── implementations/
-│   └── github-repositories.md
-└── tutorials/
-    └── learning-resources.md
-```
-
-## License
-
-This repository's original organizational content and Markdown files are released under the MIT License. Third-party papers, datasets, software, trademarks, and external resources remain subject to their respective licenses and terms.
+### Verification Databases
+- **Crossref REST API**: Official registry used to check persistent Digital Object Identifier (DOI) records and metadata.
+  * **Link**: [https://www.crossref.org](https://www.crossref.org)
+- **arXiv Search**: Open repository used to verify preprint identifiers, titles, and publication dates.
+  * **Link**: [https://arxiv.org](https://arxiv.org)
