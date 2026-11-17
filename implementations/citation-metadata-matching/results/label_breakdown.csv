@@ -1,0 +1,10 @@
+method,gold_label,count,correct_binary_rate
+M1_exact,hallucinated_major,113.0,1.0
+M1_exact,hallucinated_minor,107.0,1.0
+M1_exact,valid,123.0,1.0
+M2_title_fuzzy,hallucinated_major,113.0,1.0
+M2_title_fuzzy,hallucinated_minor,107.0,0.4205607476635514
+M2_title_fuzzy,valid,123.0,1.0
+M3_weighted_fuzzy,hallucinated_major,113.0,1.0
+M3_weighted_fuzzy,hallucinated_minor,107.0,0.9719626168224299
+M3_weighted_fuzzy,valid,123.0,0.8292682926829268

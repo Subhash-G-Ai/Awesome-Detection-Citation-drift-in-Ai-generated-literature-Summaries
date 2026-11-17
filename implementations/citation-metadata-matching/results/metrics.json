@@ -1,0 +1,46 @@
+{
+  "dataset_citations_in_json": 982,
+  "parseable_queries": 982,
+  "parse_failures": 0,
+  "catalogue_size": 978,
+  "thresholds_selected_on_dev": {
+    "M1_exact": 99.999,
+    "M2_title_fuzzy": 95,
+    "M3_weighted_fuzzy": 95
+  },
+  "test": {
+    "M1_exact": {
+      "macro_f1": 1.0,
+      "precision_valid": 1.0,
+      "recall_valid": 1.0,
+      "hit_at_1": 0.358600583090379,
+      "hit_at_5": 0.358600583090379,
+      "mrr": 0.358600583090379,
+      "valid_false_reject_rate": 0.0,
+      "corrupted_false_accept_rate": 0.0,
+      "test_count": 343
+    },
+    "M2_title_fuzzy": {
+      "macro_f1": 0.8173400673400673,
+      "precision_valid": 0.6648648648648648,
+      "recall_valid": 1.0,
+      "hit_at_1": 0.7026239067055393,
+      "hit_at_5": 0.7521865889212828,
+      "mrr": 0.7276086591326834,
+      "valid_false_reject_rate": 0.0,
+      "corrupted_false_accept_rate": 0.2818181818181818,
+      "test_count": 343
+    },
+    "M3_weighted_fuzzy": {
+      "macro_f1": 0.9211675476901862,
+      "precision_valid": 0.9714285714285714,
+      "recall_valid": 0.8292682926829268,
+      "hit_at_1": 0.6822157434402333,
+      "hit_at_5": 0.6997084548104956,
+      "mrr": 0.6934635983625533,
+      "valid_false_reject_rate": 0.17073170731707318,
+      "corrupted_false_accept_rate": 0.013636363636363636,
+      "test_count": 343
+    }
+  }
+}
