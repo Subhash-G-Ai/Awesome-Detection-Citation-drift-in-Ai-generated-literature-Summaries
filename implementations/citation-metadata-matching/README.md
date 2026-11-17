@@ -88,7 +88,30 @@ No result numbers are prefilled. Empty result files in the repository are placeh
 ├── docs/PROTOCOL_CHANGELOG.md
 └── docs/ai_assistance_log.md
 ```
+## Project Source Code
 
+The complete project source code is available in:
+
+`citation_metadata_matching_project_revised (3).zip`
+
+Download and extract the archive to access:
+- Python source files
+- Experiment scripts
+- Jupyter notebook
+- Configuration files
+- Research documentation
+- LaTeX paper files
+
+## Experimental Results
+
+The `results/` directory contains the actual experimental outputs,
+including predictions, evaluation metrics, error analysis,
+threshold sensitivity results, and plots.
+
+## Reproducibility
+
+Refer to `START_HERE.md` and `requirements.txt` inside the
+project archive for setup and execution instructions.
 ## Citation
 
 Khajavi, K., Sadeghi, S., Adhikari, R., & Tessier, A. (2026). *CITECHECK: Retrieval-Grounded Detection of LLM Citation Hallucinations in Scientific Text*. Proceedings of the 1st Workshop on Grounding Language Models: Learning Faithfully and Efficiently, 779–795. https://aclanthology.org/2026.groundlm-1.58/
