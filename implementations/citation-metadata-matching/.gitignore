@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+data/corruption_metadata.json
+results/*
+!results/.gitkeep
